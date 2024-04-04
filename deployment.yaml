@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: miksveg_deployment
+  name: apache2-deployment
   labels:
     app: apache2
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: apache2
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: apache2
-        image: miksveg/devops_project2:latest
+        image: miksveg/devops_project2
         ports:
         - containerPort: 80

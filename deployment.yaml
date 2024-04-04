@@ -1,11 +1,11 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: apache2-deployment
+  name: miksveg-deployment
   labels:
     app: apache2
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: apache2
